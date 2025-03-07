@@ -3,7 +3,9 @@
 	"package": "fuck.the.crack.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"MinecraftClientMixin",
+		"KeyBoardMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
