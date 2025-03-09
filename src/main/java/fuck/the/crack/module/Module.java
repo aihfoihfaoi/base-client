@@ -13,6 +13,7 @@ public class Module {
     public MinecraftClient mc = MinecraftClient.getInstance();
 
     public Module(String name, Category category){
+        super();
         this.name=name;
         this.description="";
         this.category=category;

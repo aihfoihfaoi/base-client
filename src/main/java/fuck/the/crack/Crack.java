@@ -1,6 +1,7 @@
 package fuck.the.crack;
 
 import fuck.the.crack.manager.ModuleManager;
+import fuck.the.crack.ui.clickGui.ClickGuiScreen;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.client.MinecraftClient;
@@ -17,11 +18,11 @@ public class Crack implements ModInitializer {
 
 
 	public static ModuleManager moduleManager;
-
+	public static ClickGuiScreen clickGuiScreen;
 	@Override
 	public void onInitialize() {
 		moduleManager=new ModuleManager();
-
+		clickGuiScreen=new ClickGuiScreen();
 	}
 
 
