@@ -2,12 +2,16 @@ package fuck.the.crack.module;
 
 import net.minecraft.client.MinecraftClient;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Module {
 
     private String name, description;
     private Category category;
     private int key;
     private boolean toggled;
+    private ArrayList<Settings> settings;
 
 
     public MinecraftClient mc = MinecraftClient.getInstance();
@@ -58,6 +62,16 @@ public class Module {
 
     public void setToggled(boolean toggled) {
         this.toggled = toggled;
+    }
+
+    public void addSetting(Settings setting){settings.add(setting);}
+    public void addSettings(Settings ...setting){settings.addAll(Arrays.asList(setting));}
+    public ArrayList<Settings> getSettings(){return settings;}
+    public Settings getSettingByName(String name){
+        for (Settings set : settings) {
+            if (set.getName().equals(name)) return set;
+        }
+        return null;
     }
 
 
